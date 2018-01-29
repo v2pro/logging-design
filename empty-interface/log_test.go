@@ -2,8 +2,8 @@ package test
 
 import (
 	"testing"
-	"fmt"
 	"unsafe"
+	"fmt"
 )
 
 var MinLevel = 20
@@ -30,6 +30,8 @@ var v2 = 10.24
 func Benchmark_empty_interface(b *testing.B) {
 	b.ReportAllocs()
 	for i := 0; i < b.N; i++ {
-		Trace(k1, v1, k2, v2)
+		if 10 >= MinLevel {
+			Trace(k1, v1, k2, v2)
+		}
 	}
 }
