@@ -1,4 +1,4 @@
-package branch_predication
+package test
 
 import "fmt"
 
